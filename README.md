@@ -44,8 +44,7 @@ AOF Persistence Layer (aof.py)
 The PyCache dashboard provides a real-time view of the system's health and performance. It displays total keys, memory usage, cache hit rate, active connections, cache hits, and cache misses through an intuitive user interface.
 
 [Dashboard Overview]:
-<img width="1884" height="864" alt="Screenshot 2026-06-08 130747" src="https://github.com/user-attachments/assets/16558068-403c-4ec4-b54f-862a21d89bf9" />
-
+dashboard-overview.png
 
 ---
 
