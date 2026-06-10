@@ -1,0 +1,4 @@
+# PyCache — High-Throughput Distributed In-Memory Key-Value Store
+# requirements.txt
+
+streamlit>=1.35.0
