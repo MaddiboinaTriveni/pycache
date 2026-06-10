@@ -1,21 +1,21 @@
 # ⚡ PyCache
 
-PyCache is a high-performance distributed in-memory key-value store inspired by Redis and built using Python. It provides fast data storage and retrieval, TTL (Time-To-Live) support, persistence through Append-Only Files (AOF), real-time monitoring, and an interactive dashboard powered by Streamlit.
+A high-performance distributed in-memory key-value store inspired by Redis, built using Python. PyCache provides fast data storage and retrieval, TTL (Time-To-Live) support, persistence through Append-Only Files (AOF), real-time monitoring, and an interactive dashboard powered by Streamlit.
 
 ---
 
 ## 🚀 Features
 
-- Fast in-memory key-value storage
-- Redis-inspired command execution
-- TTL (Time-To-Live) support for automatic key expiration
-- Append-Only File (AOF) persistence
-- Real-time monitoring dashboard
-- Cache hit and miss tracking
-- Memory usage statistics
-- Active connection monitoring
-- Interactive command terminal
-- Database management operations
+* Fast in-memory key-value storage
+* Redis-inspired command execution
+* TTL (Time-To-Live) support
+* Append-Only File (AOF) persistence
+* Real-time monitoring dashboard
+* Cache hit and miss tracking
+* Memory usage statistics
+* Active connection monitoring
+* Interactive command terminal
+* Database management operations
 
 ---
 
@@ -41,24 +41,23 @@ AOF Persistence Layer (aof.py)
 
 ## 📸 Dashboard Overview
 
-The PyCache dashboard provides a real-time view of the system's health and performance. It displays total keys, memory usage, cache hit rate, active connections, cache hits, and cache misses through an intuitive user interface.
+The dashboard provides a real-time overview of the key-value store, including memory usage, cache hit rate, active connections, total keys, cache hits, and cache misses.
 
-[Dashboard Overview]:
-dashboard-overview.png
+![Dashboard Overview](dashboard-overview.png)
 
 ---
 
 ## 💾 Database Operations
 
-The integrated command terminal allows users to execute Redis-inspired commands such as SET, GET, KEYS, DBSIZE, and INFO. This makes it easy to interact with the database and monitor its behavior in real time.
+Users can execute Redis-inspired commands directly from the interactive terminal. Supported operations include SET, GET, KEYS, DBSIZE, INFO, and more.
 
-![Database Operations](screenshots/database-operations.png)
+![Database Operations](database-operations.png)
 
 ---
 
 ## ⏳ TTL (Time-To-Live) Support
 
-PyCache supports automatic key expiration using TTL. Users can assign expiration times to keys, and the system automatically removes them once the specified duration has elapsed.
+PyCache supports automatic key expiration using TTL. Keys can be created with expiration times and are automatically removed once they expire.
 
 Example:
 
@@ -66,35 +65,34 @@ Example:
 SET temp hello EX 30
 ```
 
-![TTL Demonstration](screenshots/ttl-demo.png)
+![TTL Demonstration](ttl-demo.png)
 
 ---
 
 ## 🗑️ Database Reset (FLUSHALL)
 
-The FLUSHALL command instantly removes all stored keys from the database while keeping the server online and operational. This is useful for testing and resetting the system.
+The FLUSHALL command clears the entire database while keeping the server online and operational.
 
-![FLUSHALL Demo](screenshots/flushall-demo.png)
+![FLUSHALL Demo](flushall-demo.png)
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-PyCache/
+pycache/
 │
-├── app.py
-├── server.py
-├── engine.py
 ├── aof.py
+├── app.py
+├── engine.py
+├── server.py
 ├── traffic_simulator.py
 ├── requirements.txt
 │
-├── screenshots/
-│   ├── dashboard-overview.png
-│   ├── database-operations.png
-│   ├── ttl-demo.png
-│   └── flushall-demo.png
+├── dashboard-overview.png
+├── database-operations.png
+├── ttl-demo.png
+├── flushall-demo.png
 │
 └── README.md
 ```
@@ -103,53 +101,26 @@ PyCache/
 
 ## 🛠️ Supported Commands
 
-| Command | Description |
-|----------|-------------|
+| Command       | Description            |
+| ------------- | ---------------------- |
 | SET key value | Store a key-value pair |
-| GET key | Retrieve the value of a key |
-| DEL key | Delete one or more keys |
-| EXISTS key | Check whether a key exists |
-| TTL key | View remaining expiration time |
-| KEYS | List all stored keys |
-| DBSIZE | Show total number of keys |
-| INFO | Display server statistics |
-| PING | Check server status |
-| FLUSHALL | Remove all keys |
+| GET key       | Retrieve value         |
+| DEL key       | Delete key             |
+| EXISTS key    | Check if key exists    |
+| TTL key       | View expiration time   |
+| KEYS          | List all keys          |
+| DBSIZE        | Display database size  |
+| INFO          | Show server statistics |
+| PING          | Check server status    |
+| FLUSHALL      | Clear database         |
 
 ---
 
 ## ⚙️ Installation
 
-Clone the repository:
-
 ```bash
-git clone https://github.com/YOUR_USERNAME/pycache.git
+git clone https://github.com/MaddiboinaTriveni/pycache.git
 cd pycache
-```
-
-Create a virtual environment:
-
-```bash
-python -m venv .venv
-```
-
-Activate the environment:
-
-Windows:
-
-```bash
-.venv\Scripts\activate
-```
-
-Linux / Mac:
-
-```bash
-source .venv/bin/activate
-```
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
 ```
 
@@ -163,7 +134,7 @@ Start the backend server:
 python server.py
 ```
 
-Open a new terminal and start the dashboard:
+Open another terminal and run:
 
 ```bash
 streamlit run app.py
@@ -177,53 +148,26 @@ http://localhost:8501
 
 ---
 
-## 📊 Metrics Tracked
-
-- Total Keys
-- Memory Usage
-- Active Connections
-- Cache Hits
-- Cache Misses
-- Cache Hit Rate
-- Expired Keys
-- Database Size
-
----
-
 ## 🧪 Tech Stack
 
-- Python
-- Streamlit
-- Socket Programming
-- Multithreading
-- AOF Persistence
-- In-Memory Data Structures
+* Python
+* Streamlit
+* Socket Programming
+* Multithreading
+* AOF Persistence
+* In-Memory Data Structures
 
 ---
 
 ## 🎯 Learning Outcomes
 
-This project demonstrates practical knowledge of:
-
-- Database Internals
-- Client-Server Architecture
-- Socket Programming
-- Caching Systems
-- Persistence Mechanisms
-- System Design Concepts
-- Dashboard Development
-
----
-
-## 🔮 Future Enhancements
-
-- Authentication and Role-Based Access Control
-- Replication Support
-- Distributed Clustering
-- REST API Integration
-- Advanced Monitoring and Analytics
-- Docker Deployment
-- Cloud Hosting Support
+* Database Internals
+* Client-Server Architecture
+* Socket Programming
+* Caching Systems
+* Persistence Mechanisms
+* Dashboard Development
+* System Design Concepts
 
 ---
 
@@ -231,9 +175,6 @@ This project demonstrates practical knowledge of:
 
 **Triveni Maddiboina**
 
-B.Tech Computer Science Engineering Student  
-Python Developer | Software Engineering Enthusiast
-
----
+B.Tech Computer Science Engineering Student | Python Developer | Software Engineering Enthusiast
 
 ⭐ If you found this project useful, consider giving it a star.
